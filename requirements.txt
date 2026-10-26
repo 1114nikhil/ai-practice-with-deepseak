@@ -1,0 +1,23 @@
+# --- LLM provider SDKs ---
+anthropic            # Claude (chat)
+google-genai         # Gemini (chat + embeddings)
+openai               # OpenAI (chat + embeddings)
+voyageai             # Voyage AI embeddings (Anthropic's recommended partner)
+ 
+# --- Config and data validation ---
+python-dotenv        # loads .env files
+pydantic             # request/response models, structured output
+pydantic-settings    # typed configuration (BaseSettings)
+ 
+# --- Web service ---
+fastapi
+uvicorn[standard]    # the server that runs FastAPI
+ 
+# --- Embeddings / search experiments ---
+numpy
+scikit-learn         # dataset loader + TF-IDF keyword baseline
+tiktoken             # tokenizer demo (Lesson 3.1)
+ 
+# --- Testing ---
+pytest
+httpx                # required by FastAPI's TestClient
