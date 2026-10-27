@@ -9,3 +9,4 @@ rootProject.name = 'ai-springboot-practice'
 
 
 include 'common'
+include 'ai-service'

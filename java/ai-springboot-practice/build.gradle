@@ -12,20 +12,28 @@ description = 'ai-springboot-practice'
      springAiVersion = '1.0.3'
  }
 
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
-    }
-}
+ subprojects {
+     // Shared Java configuration for all modules
+     apply plugin: 'java'
+     apply plugin: 'io.spring.dependency-management'
 
-//repositories {
-//    mavenCentral()
-//}
- dependencyManagement {
-     imports {
-         mavenBom "org.springframework.ai:spring-ai-bom:${springAiVersion}"
+     java {
+         toolchain {
+             languageVersion = JavaLanguageVersion.of(21)
+         }
+     }
+
+     // Share Spring AI dependency versions with every module
+     dependencyManagement {
+         imports {
+             mavenBom "org.springframework.ai:spring-ai-bom:${rootProject.ext.springAiVersion}"
+         }
+     }
+
+     tasks.withType(Test).configureEach {
+         useJUnitPlatform()
      }
  }
-tasks.named('test') {
-    useJUnitPlatform()
-}
+ tasks.named('bootJar') {
+     enabled = false
+ }
