@@ -9,7 +9,7 @@ version = '0.0.1-SNAPSHOT'
 description = 'ai-springboot-practice'
 
  ext {
-     springAiVersion = '1.0.3'
+     springAiVersion = '2.0.0'
  }
 
  subprojects {
