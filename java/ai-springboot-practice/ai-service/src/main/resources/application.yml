@@ -2,16 +2,17 @@ spring:
   application:
     name: ai-service
 
-ai:
-  anthropic:
-    api-key: ${ANTHROPIC_API_KEY}
-    chat:
-      option:
-        model: ${MODEL}
-        max-tokens: ${MAX_TOKENS}
+#  ai:
+#    anthropic:
+#      api-key: ${ANTHROPIC_API_KEY}
+#      chat:
+#        options:
+#          model: ${MODEL}
+#          max-tokens: ${MAX_TOKENS}
+#          temperature: ${TEMPERATURE}
 
 server:
-  port:8081
+  port: 8081
 
 springdotenv:
   directory: ../../

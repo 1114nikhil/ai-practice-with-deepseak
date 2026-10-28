@@ -2,7 +2,6 @@ package ai.springboot.ai_service.infrastructure.adapter.out.ai;
 
 import ai.springboot.ai_service.application.port.out.LLMClientPort;
 import ai.springboot.common.exception.AIServiceException;
-import lombok.RequiredArgsConstructor;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.stereotype.Component;
 
@@ -22,7 +21,10 @@ public class AnthropicLLMAdapter implements LLMClientPort {
     @Override
     public String generate(String prompt) {
         try{
-            return  chatClient.prompt().user(prompt).call().content();
+            return  chatClient.prompt()
+                    .user(prompt)
+                    .call()
+                    .content();
         }catch (Exception e){
             throw new AIServiceException("LLM call failed",e);
         }
