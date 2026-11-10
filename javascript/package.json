@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@ai-sdk/react": "^3.0.329",
+    "@upstash/vector": "^1.2.3",
+    "ai": "^6.0.326",
+    "zod": "^4.6.7"
+  }
+}
