@@ -4,14 +4,16 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "test": "tsx",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
-    "@ai-sdk/react": "^4.0.170",
+    "@ai-sdk/anthropic": "^3.0.142",
+    "@ai-sdk/react": "^4.0.174",
     "@upstash/vector": "^1.2.3",
-    "ai": "^7.0.166",
+    "ai": "^7.0.170",
     "dotenv": "^18.0.10",
     "next": "16.4.6",
     "react": "19.3.0",
