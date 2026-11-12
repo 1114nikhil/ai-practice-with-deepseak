@@ -1,0 +1,5 @@
+Retrieval-Augmented Generation (RAG) combines a retrieval system with an LLM.
+Documents are chunked, embedded into vectors, and stored in a vector database.
+At query time, the user's question is embedded and compared to stored vectors.
+The top-k most similar chunks are added to the LLM prompt as context.
+RAG reduces hallucinations because the model answers from retrieved facts.

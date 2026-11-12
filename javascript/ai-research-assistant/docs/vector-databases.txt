@@ -1,0 +1,5 @@
+A vector database stores high-dimensional vectors and supports similarity search.
+Common similarity metrics are cosine, dot product, and Euclidean distance.
+Upstash Vector is a serverless vector database with a REST API.
+It supports both user-provided vectors and hosted embedding models.
+Namespaces let you isolate data within the same index.

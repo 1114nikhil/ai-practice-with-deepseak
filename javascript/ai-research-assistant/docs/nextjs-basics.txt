@@ -1,0 +1,5 @@
+Next.js is a React framework for building full-stack web applications.
+It uses the App Router by default, where each folder under app/ maps to a URL route.
+Route handlers live in app/api/<name>/route.ts and export GET, POST, etc.
+Server components run on the server and can access the database directly.
+Client components use "use client" and run in the browser.
